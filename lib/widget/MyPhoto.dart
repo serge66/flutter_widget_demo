@@ -23,6 +23,30 @@ class _MyContainerState extends State<MyPhoto> {
 }
 
 class MyBody extends StatelessWidget {
+  var clipOval = ClipOval(
+    child: Image.network(
+      "https://s.beta.gtimg.com/rdmimg/exp/image2/2019/07/10/_bc853cd0-366d-4b54-bff1-f62597991e8d.png",
+      width: 100,
+      height: 100,
+      fit: BoxFit.contain,
+    ),
+  );
+
+  var image = Image.network(
+    "https://s.beta.gtimg.com/rdmimg/exp/image2/2019/07/10/_bc853cd0-366d-4b54-bff1-f62597991e8d.png",
+    alignment: Alignment.center,
+    color: Colors.grey,
+    colorBlendMode: BlendMode.colorBurn,
+    // fit: BoxFit.contain,
+    // repeat: ImageRepeat.repeatY,
+    // height: 500,
+  );
+
+  var localImage = Image.asset(
+    'images/a.png',
+    fit: BoxFit.cover,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -31,7 +55,13 @@ class MyBody extends StatelessWidget {
         height: 300,
         decoration: BoxDecoration(
           color: Colors.yellow,
+          borderRadius: BorderRadius.circular(150),
+          // image: DecorationImage(
+          //     image: NetworkImage(
+          //         "https://s.beta.gtimg.com/rdmimg/exp/image2/2019/07/10/_bc853cd0-366d-4b54-bff1-f62597991e8d.png"),
+          //     fit: BoxFit.cover),
         ),
+        child: clipOval,
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'view/JFRegister.dart';
 import 'widget/MyContainer.dart';
+import 'widget/MyList.dart';
 import 'widget/MyPhoto.dart';
 
 void main() => runApp(MyApp2());
@@ -52,13 +53,27 @@ class MyApp2 extends StatelessWidget {
                       padding: const EdgeInsets.all(5),
                       height: 50,
                       child: RaisedButton(
-                        child: Text("MyPhoto"),
+                        child: Text("Image"),
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      MyPhoto(title: "MyPhoto")));
+                                      MyPhoto(title: "Image")));
+                        },
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      height: 50,
+                      child: RaisedButton(
+                        child: Text("List"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      MyList(title: "List")));
                         },
                       ),
                     ),
