@@ -1,6 +1,75 @@
 import 'package:flutter/material.dart';
+import 'view/JFRegister.dart';
+import 'widget/MyContainer.dart';
+import 'widget/MyPhoto.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MyApp2());
+
+class MyApp2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: "Demo",
+        theme: ThemeData(primaryColor: Colors.white),
+        home: Builder(
+          builder: (context) {
+            return Scaffold(
+              appBar: AppBar(
+                title: Text("Widget Demo"),
+              ),
+              body: Container(
+                child: ListView(
+                  padding: const EdgeInsets.all(10),
+                  children: <Widget>[
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      height: 50,
+                      child: RaisedButton(
+                        child: Text("供应商注册"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => JFRegister()));
+                        },
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      height: 50,
+                      child: RaisedButton(
+                        child: Text("Container and Text"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyContainer(
+                                      title: "Container and Text")));
+                        },
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      height: 50,
+                      child: RaisedButton(
+                        child: Text("MyPhoto"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      MyPhoto(title: "MyPhoto")));
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+        ));
+  }
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
