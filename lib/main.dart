@@ -4,6 +4,7 @@ import 'widget/MyContainer.dart';
 import 'widget/MyGridView.dart';
 import 'widget/MyList.dart';
 import 'widget/MyPhoto.dart';
+import 'widget/RowColumnExpanded.dart';
 
 void main() => runApp(MyApp2());
 
@@ -88,6 +89,20 @@ class MyApp2 extends StatelessWidget {
                               MaterialPageRoute(
                                   builder: (context) =>
                                       MyGridView(title: "GridView")));
+                        },
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      height: 50,
+                      child: RaisedButton(
+                        child: Text("Row Column Expanded"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => RowColumnExpanded(
+                                      title: "Row Column Expanded")));
                         },
                       ),
                     ),
