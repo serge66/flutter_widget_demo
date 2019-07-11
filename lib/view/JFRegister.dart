@@ -8,7 +8,7 @@ class JFRegister extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("供应方注册"),
+          title: Text("供应商注册"),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () => Navigator.pop(context),

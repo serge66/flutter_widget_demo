@@ -14,11 +14,8 @@ class _MyContainerState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(widget.title),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () => Navigator.pop(context),
-          )),
+        title: Text(widget.title),
+      ),
       body: Center(
         child: Column(
           children: <Widget>[
@@ -26,7 +23,12 @@ class _MyContainerState extends State<MyStatefulWidget> {
               height: 100,
             ),
             Chip(
-              label: Text("$_count"),
+              label: Text(
+                "$_count",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
             ),
             SizedBox(
               height: 50,

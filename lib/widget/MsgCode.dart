@@ -24,7 +24,7 @@ class MsgCode extends StatefulWidget {
   final bool available;
 
   MsgCode({
-    this.countdown: 6,
+    this.countdown: 60,
     this.onTapCallback,
     this.available: false,
   });
