@@ -23,9 +23,22 @@ class _MyContainerState extends State<MyList> {
 }
 
 class MyBody extends StatelessWidget {
- 
+  List list = new List();
+  MyBody() {
+    for (int i = 0; i < 30; i++) {
+      list.add("我是列表第$i 条");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Text("data");
+    return ListView.builder(
+      itemCount: list.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(list[index]),
+        );
+      },
+    );
   }
 }

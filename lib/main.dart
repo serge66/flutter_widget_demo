@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'view/JFRegister.dart';
 import 'widget/MyContainer.dart';
+import 'widget/MyGridView.dart';
 import 'widget/MyList.dart';
 import 'widget/MyPhoto.dart';
 
@@ -72,8 +73,21 @@ class MyApp2 extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
+                                  builder: (context) => MyList(title: "List")));
+                        },
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      height: 50,
+                      child: RaisedButton(
+                        child: Text("GridView"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
                                   builder: (context) =>
-                                      MyList(title: "List")));
+                                      MyGridView(title: "GridView")));
                         },
                       ),
                     ),

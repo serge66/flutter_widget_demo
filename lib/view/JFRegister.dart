@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_demo/widget/MsgCode.dart';
 import 'package:flutter_widget_demo/widget/ProgressDialog.dart';
-import 'package:flutter_widget_demo/utils/Strings.dart' as MyStrings;
+import 'package:flutter_widget_demo/utils/ZKStrings.dart';
 
 class JFRegister extends StatelessWidget {
   @override
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return ProgressDialog(
       loading: dialogShow,
-      msg: MyStrings.Strings.netProgressMsg,
+      msg: ZKStrings.netProgressMsg,
       child: Container(
         padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
         child: Column(
