@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'view/JFRegister.dart';
+import 'view/MyTabs.dart';
 import 'widget/MyContainer.dart';
 import 'widget/MyGridView.dart';
 import 'widget/MyList.dart';
 import 'widget/MyPhoto.dart';
+import 'widget/MyStatefulWidget.dart';
 import 'widget/RowColumnExpanded.dart';
+import 'widget/MyCard.dart';
 
 void main() => runApp(MyApp2());
 
@@ -103,6 +106,47 @@ class MyApp2 extends StatelessWidget {
                               MaterialPageRoute(
                                   builder: (context) => RowColumnExpanded(
                                       title: "Row Column Expanded")));
+                        },
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      height: 50,
+                      child: RaisedButton(
+                        child: Text("Card"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyCard(title: "Card")));
+                        },
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      height: 50,
+                      child: RaisedButton(
+                        child: Text("StatefulWidget"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyStatefulWidget(
+                                      title: "StatefulWidget")));
+                        },
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      height: 50,
+                      child: RaisedButton(
+                        child: Text("BottomNavigationBar"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      MyTabs(title: "BottomNavigationBar")));
                         },
                       ),
                     ),
