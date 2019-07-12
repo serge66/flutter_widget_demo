@@ -7,7 +7,7 @@ class MyProjectPage extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          leading: Text(""),
+          // leading: Text(""),
           title: TabBar(
             tabs: <Widget>[
               Tab(

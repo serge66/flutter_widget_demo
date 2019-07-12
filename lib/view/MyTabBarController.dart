@@ -5,6 +5,7 @@ class MyTabBarController extends StatefulWidget {
   _MyTabBarControllerState createState() => _MyTabBarControllerState();
 }
 
+//另一种方式实现顶部tabbar,可以监听一些事件
 class _MyTabBarControllerState extends State<MyTabBarController>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
@@ -23,6 +24,7 @@ class _MyTabBarControllerState extends State<MyTabBarController>
       appBar: AppBar(
         title: Text('TabController'),
         bottom: TabBar(
+          //必须配置这个
           controller: _tabController,
           tabs: <Widget>[
             Tab(
@@ -35,6 +37,7 @@ class _MyTabBarControllerState extends State<MyTabBarController>
         ),
       ),
       body: TabBarView(
+        //必须配置这个
         controller: _tabController,
         children: <Widget>[
           Text('推荐'),

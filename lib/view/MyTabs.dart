@@ -19,11 +19,104 @@ class _TabsState extends State<MyTabs> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(widget.title),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () => Navigator.pop(context),
-          )),
+        title: Text(widget.title),
+        // leading: IconButton(
+        //   icon: Icon(Icons.arrow_back_ios),
+        //   onPressed: () => Navigator.pop(context),
+        // ),
+      ),
+      drawer: Drawer(
+          child: Column(
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text("小明"),
+            accountEmail: Text('lishengjiejob@163.com'),
+            currentAccountPicture: CircleAvatar(
+              // child: Image.network('https://www.itying.com/images/flutter/2.png'),
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/1.png'),
+            ),
+          ),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/2.png'),
+            ),
+            title: Text('我的空间'),
+          ),
+          Divider(),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/2.png'),
+            ),
+            title: Text('我的信息'),
+          ),
+          Divider(),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/4.png'),
+            ),
+            title: Text('我的账单'),
+          ),
+          Divider(),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/3.png'),
+            ),
+            title: Text('我的美容'),
+          ),
+          Divider(),
+        ],
+      )),
+      endDrawer: Drawer(
+          child: Column(
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text("小明"),
+            accountEmail: Text('lishengjiejob@163.com'),
+            currentAccountPicture: CircleAvatar(
+              // child: Image.network('https://www.itying.com/images/flutter/2.png'),
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/1.png'),
+            ),
+          ),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/2.png'),
+            ),
+            title: Text('我的空间'),
+          ),
+          Divider(),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/2.png'),
+            ),
+            title: Text('我的信息'),
+          ),
+          Divider(),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/4.png'),
+            ),
+            title: Text('我的账单'),
+          ),
+          Divider(),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://www.itying.com/images/flutter/3.png'),
+            ),
+            title: Text('我的美容'),
+          ),
+          Divider(),
+        ],
+      )),
       body: this.pages[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
