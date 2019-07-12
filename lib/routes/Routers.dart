@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_demo/view/MyMain.dart';
 import 'package:flutter_widget_demo/view/MyTabBar.dart';
+import 'package:flutter_widget_demo/view/MyTabBarController.dart';
 import '../view/MyForm.dart';
 import '../view/MyForm2.dart';
 import '../main.dart';
@@ -9,6 +10,7 @@ import '../main.dart';
 var routers = {
   '/': (context) => MyMain(),
   '/tabbar_page': (context) => MyTabBar(),
+  '/tabcontroller_page': (context) => MyTabBarController(),
   '/form_page': (context) => MyForm(),
   '/form_page2': (context, {arguments}) => MyForm2(arguments: arguments),
 };

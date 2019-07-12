@@ -151,6 +151,16 @@ class MyMain extends StatelessWidget {
                 },
               ),
             ),
+            Container(
+              padding: const EdgeInsets.all(5),
+              height: 50,
+              child: RaisedButton(
+                child: Text("TabBarController"),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/tabcontroller_page');
+                },
+              ),
+            ),
           ],
         ),
       ),
