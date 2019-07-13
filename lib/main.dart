@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_demo/routes/Routers.dart';
 import 'view/MyMain.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() => runApp(MyApp2());
 
@@ -11,10 +12,21 @@ class MyApp2 extends StatelessWidget {
       //去掉debug图标
       debugShowCheckedModeBanner: false,
       title: "Demo",
-      theme: ThemeData(primaryColor: Colors.white),
+      // theme: ThemeData(primaryColor: Colors.white),
       initialRoute: '/',
       onGenerateRoute: onMyGenerateRoute,
       // home: MyMain(),
+      //国际化
+      localizationsDelegates: [
+        //此处
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        //此处
+        const Locale('zh', 'CH'),
+        const Locale('en', 'US'),
+      ],
     );
   }
 }

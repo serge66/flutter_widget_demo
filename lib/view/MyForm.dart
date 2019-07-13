@@ -12,8 +12,43 @@ class MyForm extends StatelessWidget {
           // ),
         ),
         body: Container(
+          padding: EdgeInsets.all(20),
           child: Column(
-            children: <Widget>[Text("hello")],
+            children: <Widget>[
+              TextField(),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(), hintText: "请输入要搜索的内容"),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(), labelText: "密码"),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
+                maxLines: 4,
+                decoration: InputDecoration(
+                  hintText: "多行文本",
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    icon: Icon(Icons.people), hintText: "请输入用户名"),
+              )
+            ],
           ),
         ));
   }

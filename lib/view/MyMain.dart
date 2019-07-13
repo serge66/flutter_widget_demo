@@ -161,6 +161,36 @@ class MyMain extends StatelessWidget {
                 },
               ),
             ),
+            Container(
+              padding: const EdgeInsets.all(5),
+              height: 50,
+              child: RaisedButton(
+                child: Text("表单"),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/form_page');
+                },
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(5),
+              height: 50,
+              child: RaisedButton(
+                child: Text("checkbox radio"),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/check_page');
+                },
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(5),
+              height: 50,
+              child: RaisedButton(
+                child: Text("Date Time"),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/datatime_page');
+                },
+              ),
+            ),
           ],
         ),
       ),

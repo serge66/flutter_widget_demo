@@ -143,8 +143,11 @@ class _MyHomePageState extends State<MyHomePage> {
               margin: const EdgeInsets.fromLTRB(0, 100, 0, 0),
               // padding: const EdgeInsets.fromLTRB(0, 100, 0, 10),
               width: 300,
-              height: 40,
+              height: 45,
               child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: Text("立即注册"),
                 color: Colors.blue,
                 textColor: Colors.white,
