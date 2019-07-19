@@ -27,24 +27,41 @@ class _MyHomePageState extends State<MyHomePage> {
   bool dialogShow = false;
   String codeMsg = "获取验证码";
 
-  static TextEditingController _textEditingController =
+@override
+void initState() { 
+  super.initState();
+     _textEditingController =
       new TextEditingController();
 
-  static TextEditingController _textEditingController2 =
+    _textEditingController2 =
       new TextEditingController();
 
-  static TextEditingController _textEditingController3 =
+    _textEditingController3 =
       new TextEditingController();
 
-  static TextEditingController _textEditingController4 =
+    _textEditingController4 =
       new TextEditingController();
+}
+
+  static TextEditingController _textEditingController;
+
+  static TextEditingController _textEditingController2;
+
+  static TextEditingController _textEditingController3;
+
+  static TextEditingController _textEditingController4;
 
   @override
   void dispose() {
-    _textEditingController?.clear();
-    _textEditingController2?.clear();
-    _textEditingController3?.clear();
-    _textEditingController4?.clear();
+    // _textEditingController?.clear();
+    // _textEditingController2?.clear();
+    // _textEditingController3?.clear();
+    // _textEditingController4?.clear();
+
+    _textEditingController?.dispose();
+    _textEditingController2?.dispose();
+    _textEditingController3?.dispose();
+    _textEditingController4?.dispose();
 
     super.dispose();
   }
